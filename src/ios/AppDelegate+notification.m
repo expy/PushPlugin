@@ -102,7 +102,7 @@ static char launchNotificationKey;
 
     for (WebViewController *controller in [root.allWebViewControllers allValues]) {
 
-        if (![controller.webView isLoading] && self.launchNotification) {
+        if (self.launchNotification) {
             PushPlugin *pushHandler = [controller getCommandInstance:@"PushPlugin"];
 
             pushHandler.notificationMessage = self.launchNotification;
